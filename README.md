@@ -1,90 +1,91 @@
-# Allure Salon — Backend API
+💇‍♀️ Allure Salon – Smart Booking & Management System
 
-Node.js + Express + MongoDB REST API for managing salon appointments.
+🔗 Live Website: https://alluresalonjaipur.netlify.app/
 
----
+🔗 Backend Repository: https://github.com/Drishtijain02/Allure-Backend
 
-## Quick Start (Local)
+📌 Overview
 
-```bash
-# 1. Install dependencies
+Allure Salon is a full-stack web application designed to simplify salon operations and enhance customer experience.
+
+It provides an elegant user interface for clients to explore services and book appointments, along with a dedicated owner dashboard to efficiently manage bookings.
+
+🚀 Features
+🌐 User Side (Client Interface)
+🏠 Modern responsive homepage
+ℹ️ About section with salon details
+💅 Services listing
+🖼️ Gallery showcase
+⭐ Google Reviews Integration (real-time display)
+📍 Google Maps Integration for location
+📞 Contact & WhatsApp integration
+📅 Online Appointment Booking System
+🛠️ Owner Dashboard
+🔐 Secure login system (username & password)
+📋 View all customer appointments
+✅ Accept / confirm bookings
+❌ Reject or manage requests
+📲 One-click WhatsApp confirmation
+✔️ Mark appointments as completed
+🧠 Problem It Solves
+
+Traditional salon booking systems rely heavily on manual coordination, calls, or walk-ins.
+This platform:
+
+Reduces scheduling conflicts
+Automates booking workflow
+Improves customer convenience
+Provides centralized appointment management
+⚙️ Tech Stack
+Frontend
+HTML, CSS, JavaScript
+Responsive UI design
+Backend
+Node.js
+Express.js
+Database
+(Add yours here: MongoDB / MySQL / etc.)
+Integrations
+Google Maps API
+Google Reviews embedding
+WhatsApp API / Click-to-chat
+📸 Screenshots
+
+Add screenshots of homepage, booking section, and dashboard here
+
+📂 Project Structure
+Allure-Backend/
+│── routes/
+│── controllers/
+│── models/
+│── config/
+│── server.js
+🔧 Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/Drishtijain02/Allure-Backend.git
+cd Allure-Backend
+2️⃣ Install dependencies
 npm install
+3️⃣ Setup environment variables
 
-# 2. Create your .env (copy the example and fill in your MongoDB URI)
-cp .env.example .env          # Linux/Mac
-copy .env.example .env         # Windows
+Create a .env file and add:
 
-# 3. Start the server
+PORT=5000
+DATABASE_URL=your_database_url
+4️⃣ Run the server
 npm start
-```
+📌 Future Enhancements
+💳 Payment gateway integration
+📊 Analytics dashboard
+📅 Advanced scheduling (time slots optimization)
+📱 Mobile app version
+🔔 SMS/Email notifications
+🙋‍♀️ Author
 
-The server starts on **http://localhost:5000** by default.
+Drishti Jain
 
----
+💼 BTech CSE (AI/ML) Student
+🚀 Passionate about full-stack development & building real-world projects
+⭐ Show Your Support
 
-## Environment Variables
-
-| Variable          | Description                                              | Example                                              |
-| ----------------- | -------------------------------------------------------- | ---------------------------------------------------- |
-| `MONGO_URI`       | MongoDB connection string (Atlas or local)               | `mongodb+srv://user:pass@cluster.mongodb.net/allure` |
-| `PORT`            | Port the server listens on (default `5000`)              | `5000`                                               |
-| `ALLOWED_ORIGINS` | Comma-separated list of origins allowed by CORS          | `https://my-app.netlify.app,http://localhost:3000`   |
-
----
-
-## API Endpoints
-
-| Method   | Path                       | Description                   |
-| -------- | -------------------------- | ----------------------------- |
-| `GET`    | `/api/health`              | Health check + DB status      |
-| `GET`    | `/api/appointments`        | List all (newest first)       |
-| `GET`    | `/api/appointments?status=New` | Filter by status          |
-| `GET`    | `/api/appointments?date=2026-03-17` | Filter by date       |
-| `POST`   | `/api/appointments`        | Create new appointment        |
-| `PATCH`  | `/api/appointments/:id`    | Update appointment status     |
-| `DELETE` | `/api/appointments/:id`    | Delete an appointment         |
-
-### POST body example
-
-```json
-{
-  "id": "abc123",
-  "name": "Priya Sharma",
-  "phone": "9876543210",
-  "service": "Haircut",
-  "date": "2026-03-20",
-  "time": "14:00",
-  "msg": "First visit"
-}
-```
-
-### PATCH body example
-
-```json
-{ "status": "Confirmed" }
-```
-
-Allowed status values: `New`, `Confirmed`, `Done`, `Cancelled`
-
----
-
-## Deploy on Render
-
-1. Push this repo to GitHub.
-2. Go to [render.com](https://render.com) → **New → Web Service**.
-3. Connect your GitHub repo.
-4. Settings:
-   - **Build command**: `npm install`
-   - **Start command**: `npm start`
-5. Add environment variables in the Render dashboard:
-   - `MONGO_URI` — your MongoDB Atlas connection string
-   - `ALLOWED_ORIGINS` — your Netlify URL, e.g. `https://allure-salon.netlify.app`
-6. Deploy. Your API will be live at: `https://your-service.onrender.com`
-
-### Final API URL format
-
-```
-https://your-service.onrender.com/api/appointments
-```
-
-Use this URL in your frontend's `API_URL` constant.
+If you like this project, give it a ⭐ on GitHub!
